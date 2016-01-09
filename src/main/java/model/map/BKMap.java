@@ -1,4 +1,4 @@
-package model.map;
+package model.map.naive;
 
 public interface BKMap<K,V>{
     int size();
