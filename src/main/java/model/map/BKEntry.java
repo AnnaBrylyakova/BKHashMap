@@ -1,9 +1,9 @@
-package model.map.entry;
+package model.map;
 
 public interface BKEntry<K,V> {
     public K getKey();
 
     public V getValue();
 
-    public void setValue(V value);
+    public V setValue(V value);
 }

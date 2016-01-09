@@ -1,6 +1,6 @@
 package model.map.hash;
 
-import model.map.entry.BKEntry;
+import model.map.BKEntry;
 
 public class BKHashNode<K,V> implements BKEntry<K,V> {
     final int hash;
