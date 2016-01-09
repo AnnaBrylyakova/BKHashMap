@@ -1,7 +1,6 @@
 package model.map.naive;
 
-import model.map.BKMap;
-import model.map.naive.BKSimpleEntry;
+import model.map.entry.BKSimpleEntry;
 
 import java.util.Arrays;
 
@@ -41,7 +40,7 @@ public class BKSimpleMap<K,V> implements BKMap<K,V> {
         }
         if (insert) {
             ensureCapacity();
-            values[size++] = new BKSimpleEntry<K, V>(key, value);
+            values[size++] = new BKSimpleEntry<>(key, value);
         }
         return value;
     }
@@ -62,7 +61,7 @@ public class BKSimpleMap<K,V> implements BKMap<K,V> {
     public V remove(K key) {
         V value = null;
         for (int i = 0; i < size; i++) {
-            if (values[i].getKey().equals(key)) {
+            if (values[i]!=null && values[i].getKey().equals(key)) {
                 value = values[i].getValue();
                 values[i] = null;
                 size--;
