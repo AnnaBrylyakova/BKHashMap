@@ -1,10 +1,7 @@
 package model.map.hash;
 
-import model.map.entry.BKEntry;
+import model.map.BKEntry;
 
-/**
- * Created by SBT-Kovalev-DA on 05.01.2016.
- */
 public class BKHashNode<K,V> implements BKEntry<K,V> {
     final int hash;
     final K key;
