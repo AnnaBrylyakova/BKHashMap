@@ -27,7 +27,7 @@ public class LatencyMeasuredHashMap<K,V> implements BKMap<K,V> {
         V put = map.put(key, value);
 
         long entTime = System.nanoTime();
-        long totalTime = (entTime - startTime) / 1000000L;
+        long totalTime = (entTime - startTime);// / 1000L;
         putLat += totalTime;
         return put;
     }
@@ -44,7 +44,7 @@ public class LatencyMeasuredHashMap<K,V> implements BKMap<K,V> {
         V remove = map.remove(key);
 
         long entTime = System.nanoTime();
-        long totalTime = (entTime - startTime) / 1000000L;
+        long totalTime = (entTime - startTime) ;// / 1000L;
         remLat += totalTime;
         return remove;
     }
